@@ -2,6 +2,7 @@
     public class Prodotto {
         public string Codice { get; init; }
         public string Nome { get; set; }
+        public string NomeEsteto { get => Codice + Nome; }
         public string Descrizione { get; set; }
         private float prezzoBase;
         public float PrezzoBase {
