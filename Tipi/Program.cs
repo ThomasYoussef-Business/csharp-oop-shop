@@ -21,6 +21,7 @@
 using CSharpShop;
 
 Prodotto maionese = new Prodotto("Maionese", "Un barattolo di maionese", 5.99, 0.052);
-Console.WriteLine($@"{maionese.Nome}:
+Console.WriteLine($@"{maionese.Nome} [{maionese.NomeEsteto}]:
 {maionese.Descrizione}
-EUR{maionese.PrezzoConIva}");
+EUR {maionese.PrezzoConIva}
+IVA {maionese.Iva}");
