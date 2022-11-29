@@ -21,6 +21,7 @@
                 if (value is < 0 or > 1) {
                     throw new ArgumentOutOfRangeException(nameof(value), $"{nameof(value)} deve essere tra 0 e 1");
                 }
+                iva = value;
             }
         }
         public double PrezzoConIva => PrezzoBase + (PrezzoBase * Iva);
