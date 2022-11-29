@@ -23,7 +23,7 @@
                 }
             }
         }
-        public double PrezzoConIva => PrezzoBase * Iva;
+        public double PrezzoConIva => PrezzoBase + (PrezzoBase * Iva);
 
         public Prodotto(string nome, string descrizione, double prezzoBase, double iva) {
             Codice = new Random().Next(1, 100_000_000).ToString(); // Valori casuali da 1 a 99,999,999
