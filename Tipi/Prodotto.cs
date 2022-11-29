@@ -3,7 +3,16 @@
         public string Codice { get; init; }
         public string Nome { get; set; }
         public string Descrizione { get; set; }
-        public float PrezzoBase { get; init; }
+        private readonly float prezzoBase;
+        public float PrezzoBase {
+            get => prezzoBase;
+            init {
+                if (value is < 0) {
+                    throw new ArgumentOutOfRangeException(nameof(value), $"{nameof(value)} non può essere meno di zero");
+                }
+                prezzoBase = value;
+            }
+        }
         private readonly float iva;
         public float Iva {
             get => iva;
