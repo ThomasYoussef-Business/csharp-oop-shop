@@ -2,7 +2,7 @@
     public class Prodotto {
         public string Codice { get; init; }
         public string Nome { get; set; }
-        public string NomeEsteto { get => Codice + Nome; }
+        public string NomeEsteto => Codice + Nome;
         public string Descrizione { get; set; }
         private float prezzoBase;
         public float PrezzoBase {
@@ -23,10 +23,10 @@
                 }
             }
         }
-        public float PrezzoConIva { get => (PrezzoBase * Iva); }
+        public float PrezzoConIva => PrezzoBase * Iva;
 
-        public Prodotto(string codice, string nome, string descrizione, float prezzoBase, float iva) {
-            Codice = codice ?? throw new ArgumentNullException(nameof(codice), $"{nameof(codice)} non può essere nullo");
+        public Prodotto(string nome, string descrizione, float prezzoBase, float iva) {
+            Codice = new Random().Next(1, 100_000_000).ToString(); // Valori casuali da 1 a 99,999,999
             Nome = nome ?? throw new ArgumentNullException(nameof(nome), $"{nameof(nome)} non può essere nullo");
             Descrizione = descrizione ?? throw new ArgumentNullException(nameof(descrizione), $"{nameof(descrizione)} non può essere nullo");
             PrezzoBase = prezzoBase;
