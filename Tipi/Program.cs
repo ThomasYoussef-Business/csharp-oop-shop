@@ -17,3 +17,7 @@
  *
  * Testate poi i vostri oggetti Prodotto, istanziandoli e provando ad interagirci con loro per testare tutti i metodi che avete previsto e implementato.
  */
+
+using CSharpShop;
+
+Prodotto maionese = new Prodotto("Maionese", "Un barattolo di maionese", 5.99, 1.2);
