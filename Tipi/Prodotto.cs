@@ -1,4 +1,4 @@
-﻿namespace Tipi {
+﻿namespace CSharpShop {
     public class Prodotto {
         public string Codice { get; init; }
         public string Nome { get; set; }
